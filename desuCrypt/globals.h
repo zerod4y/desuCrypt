@@ -2,8 +2,9 @@
 extern std::vector<std::wstring> filesDB;
 extern _WIN32_FIND_DATAW curItem;
 extern TCHAR curPath[MAX_PATH];
-extern LPWSTR ignoreDirs[14];
-extern LPWSTR fileExts[181];
+extern LPWSTR ignoreDirs[16];
+extern LPWSTR fileExts[183];
+//extern HANDLE statFileHandle;
 const extern std::wstring encExt;
 extern HCRYPTKEY keyHandle;
 extern HCRYPTKEY xchgKeyHandle;

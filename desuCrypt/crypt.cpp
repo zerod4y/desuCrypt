@@ -40,6 +40,8 @@ void destroyKeys() {
 
 }
 
+
+
 void encryptBuffer(byte *buf, DWORD bufLen, BOOL isLastBlock) {
 	
 	if (CryptEncrypt(

