@@ -149,7 +149,7 @@
     <ClInclude Include="crypt.h" />
     <ClInclude Include="fssearch.h" />
     <ClInclude Include="globals.h" />
-    <ClInclude Include="RegistryManipulation.h" />
+    <ClInclude Include="putinfo.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="rw.h" />
     <ClInclude Include="stdafx.h" />
@@ -160,6 +160,7 @@
     <ClCompile Include="desuCrypt.cpp" />
     <ClCompile Include="fssearch.cpp" />
     <ClCompile Include="globals.cpp" />
+    <ClCompile Include="putinfo.cpp" />
     <ClCompile Include="rw.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -169,14 +170,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\..\Pictures\background.jpg">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
-      <DeploymentContent>true</DeploymentContent>
-    </Image>
+    <ResourceCompile Include="desuCrypt.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Resource.rc" />
+    <Image Include="background.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

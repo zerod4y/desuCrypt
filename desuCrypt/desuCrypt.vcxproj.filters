@@ -30,10 +30,13 @@
     <ClInclude Include="globals.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RegistryManipulation.h">
+    <ClInclude Include="rw.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="rw.h">
+    <ClInclude Include="putinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -56,5 +59,18 @@
     <ClCompile Include="rw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="putinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="desuCrypt.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="background.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
